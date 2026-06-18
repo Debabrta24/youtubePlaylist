@@ -108,7 +108,7 @@ const Main = () => {
           <button
             onClick={fetchPlaylist}
             disabled={loading}
-            className="bg-green-500 hover:bg-green-400 text-black font-semibold px-6 rounded-lg"
+            className="bg-green-500 hover:bg-green-400 text-black font-semibold  rounded-lg p-2.5 "
           >
             {loading
               ? "Loading..."

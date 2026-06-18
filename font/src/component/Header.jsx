@@ -23,7 +23,7 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="https://github.com/Debabrta24"
+              href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-center text-black font-semibold py-2 rounded-lg"

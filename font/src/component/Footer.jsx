@@ -38,7 +38,7 @@ const Footer = () => {
             </p>
 
             <a
-              href="https://github.com/Debabrta24"
+              href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block mt-2 text-green-300 hover:text-green-400 text-sm transition"
@@ -82,7 +82,7 @@ const Footer = () => {
               </p>
 
               <a
-                href="https://github.com/Debabrta24"
+                href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-2 text-green-300 hover:text-green-400 text-sm transition"

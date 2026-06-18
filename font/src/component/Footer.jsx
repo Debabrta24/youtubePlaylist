@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           {/* Features + Developer Same Row */}
-          <div className="grid grid-cols-2 gap-6 text-center">
+          <div className=" hidden grid grid-cols-2 gap-6 text-center">
             <div>
               <h3 className="text-white font-semibold mb-3">Features</h3>
 

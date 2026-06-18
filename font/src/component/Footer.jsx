@@ -17,6 +17,35 @@ const Footer = () => {
               watch time, and view playlist statistics in seconds.
             </p>
           </div>
+
+          {/* Features */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">Features</h3>
+
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li>YouTube Video Counter</li>
+              <li>Playlist Duration</li>
+              <li>Watch Time Calculator</li>
+            </ul>
+          </div>
+
+          {/* Developer */}
+          <div>
+            <h3 className="text-white font-semibold mb-3">Developer</h3>
+
+            <p className="text-green-400 font-bold text-lg">
+              Debabrata Paul
+            </p>
+
+            <a
+              href="https://github.com/Debabrta24"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-2 text-green-300 hover:text-green-400 text-sm transition"
+            >
+              Contact →
+            </a>
+          </div>
         </div>
 
         {/* Mobile & Tablet */}

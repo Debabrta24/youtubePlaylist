@@ -1,0 +1,27 @@
+// http://localhost:3000 need to call this function sent request as youtube url and is need to calculate fule playlist true or false default is true 
+// if  true then return a  second time show that as multiple speed option slike 1x, 1.25x,1.5x,2x or add a slider upto 10x also need to cahneg base don this 
+// if tick is false means full_playslist is false thsen it retuen a array of playlist id ok   
+// {
+//     "youtube_url":"https://youtube.com/playlist?list=RDbmX2nhCY3wU&playnext=1&si=N5infBJ7d_8sIymf",
+//     "full_playlist":false
+// }
+
+// VITE_URL=http://localhost:3000/
+// VITE_COUSTOMIZED_PLAYLIST_URl= http://localhost:3000/editedplayslt
+
+// http://localhost:3000/editedplayslt
+//  then need to call this function where  post request are 
+
+// {
+//     "starting": 1,
+//     "ending": 10,
+//     "array": [
+//         "uZ3Y9f8JIBU", // this are privious sened play id ok 
+//         "iz2V4ZM0B2U",
+//         "1tf2uKbM4rA",
+//         "LB40_lLxKLI",
+//         "UOfih2w01wY"
+//     ]
+// }
+//  now what jut call top function need to show tie as 1x 1.25x ...a slide rup to 10 ok do this domt cnage chnage font just implemnet this logic 
+//  and just also need video clicking options and bbased on satrting a ending edit the post request arr like if 300/ request give 10 id but user set as "start":2 ad end is 4 then arry size is 2 to 4 mans 3 ok just do this and video clicking options also need 

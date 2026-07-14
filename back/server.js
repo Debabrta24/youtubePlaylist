@@ -30,12 +30,15 @@ app.post('/', async (req, res) => {
         const timeDataid = await timeData(data);
         const totaltime = await timevalue(timeDataid)
         res.send(totaltime)
+        // res.json(totaltime)
+
     }
     else {
         console.log(req.body.youtube_url)
         const data = await getData(list_id)
         // const timeDataid = await timeData(data);
         res.send(data)
+        // res.json(300).send(data)
     }
 })
 

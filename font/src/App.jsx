@@ -11,7 +11,7 @@ function App() {
       <Header />
 
       <main className="flex-1">
-        <Main />
+        <Main/>
       </main>
 
       <Footer />

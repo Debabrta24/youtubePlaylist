@@ -22,14 +22,14 @@ export default function Header() {
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
-            <a
+            {/* <a
               href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 text-center text-black font-semibold py-2 rounded-lg"
             >
               GitHub
-            </a>
+            </a> */}
           </nav>
 
           <div className="md:hidden pb-4">

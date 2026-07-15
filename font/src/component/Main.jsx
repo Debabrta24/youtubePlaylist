@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const formatDuration = (totalSeconds, speed = 1) => {
@@ -29,6 +29,7 @@ const Main = () => {
   const [videos, setVideos] = useState([]);
   const [toast, setToast] = useState(null);
   const [customSpeed, setCustomSpeed] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const showToast = (message, type = "info") => {
     setToast({ message, type });
@@ -55,6 +56,7 @@ const Main = () => {
       showToast("Please enter a YouTube playlist URL", "error");
       return;
     }
+    setLoading(true);
     try {
       const response = await axios.post(import.meta.env.VITE_ALL_FEATCH_ALL_TIME, {
         youtube_url:
@@ -82,6 +84,8 @@ const Main = () => {
           "Failed to fetch playlist details. Please check the backend connection.",
         "error",
       );
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -153,6 +157,7 @@ const Main = () => {
       array: checkedVideoIds,
     });
 
+    setLoading(true);
     try {
       const response = await axios.post(
         import.meta.env.VITE_COUSTOMIZED_PLAYLIST_URl,
@@ -171,6 +176,8 @@ const Main = () => {
     } catch (error) {
       console.error("Error submitting selected videos:", error);
       showToast("Failed to submit selection. Please try again.", "error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -443,6 +450,22 @@ const Main = () => {
           >
             &times;
           </button>
+        </div>
+      )}
+
+      {loading && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md transition-all duration-300">
+          <div className="flex flex-col items-center p-8 bg-green-950/80 border border-green-500/30 rounded-2xl shadow-2xl max-w-sm text-center">
+            {/* Spinning Circle */}
+            <div className="relative w-16 h-16 mb-4">
+              <div className="absolute inset-0 rounded-full border-4 border-green-500/10"></div>
+              <div className="absolute inset-0 rounded-full border-4 border-green-500 border-t-transparent animate-spin"></div>
+            </div>
+            <h3 className="text-lg font-semibold text-green-300">Analyzing Playlist</h3>
+            <p className="text-sm text-gray-400 mt-2">
+              Please wait while we fetch the details. This may take a few seconds...
+            </p>
+          </div>
         </div>
       )}
     </div>

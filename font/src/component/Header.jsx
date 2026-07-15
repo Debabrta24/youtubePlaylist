@@ -34,14 +34,14 @@ export default function Header() {
 
           <div className="md:hidden pb-4">
             <div className="flex flex-col gap-4">
-              <a
+              {/* <a
                 href="https://github.com/Debabrta24"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-center text-black font-semibold py-2 rounded-lg"
               >
                 GitHub
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

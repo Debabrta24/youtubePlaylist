@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     if (req.body.full_playlist) {
         console.log(req.body.youtube_url)
         const data = await getData(list_id)
-        console.lo
+    
         const timeDataid = await timeData(data);
         const totaltime = await timevalue(timeDataid)
         res.send(totaltime)

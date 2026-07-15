@@ -51,7 +51,7 @@ const Main = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:3000/", {
+      const response = await axios.post(import.meta.env.ALL_FEATCH_ALL_TIME, {
         youtube_url:
           "https://youtube.com/playlist?list=RDbmX2nhCY3wU&playnext=1&si=N5infBJ7d_8sIymf",
         full_playlist: wholePlaylist,
@@ -150,7 +150,7 @@ console.log({
 });
 
 try {
-  const response = await axios.post("http://localhost:3000/editedplayslt", {
+  const response = await axios.post(import.meta.env.VITE_COUSTOMIZED_PLAYLIST_URl, {
     starting: startIndex,
     ending: endIndex,
     array: checkedVideoIds,

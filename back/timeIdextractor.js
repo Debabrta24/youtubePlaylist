@@ -1,8 +1,7 @@
 const axios = require("axios");
 const getData = require("./idExtracter");
 
-const token = "AIzaSyD4DsICpt_Oi_bYqwssNGSyHqufeIGeePs"
-
+const token = process.env.YT_V3_API_KEY
 // const url = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${ids}&key=${token}`
 
 
